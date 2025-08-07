@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <meta name="viewport", initial-scale=1.0" />
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -16,17 +16,17 @@
         <div class="welcome">
           <h1>Welcome</h1>
           <p>Play Game</p>
-          <button>VS Player</button>
+          <button class="welcome-btn">VS Player</button>
         </div>
-      </main>
+     
 
       <div class="player1">
         <h2>Player 1</h2>
 
         <div class="btn-choice">
           <p style="font-size: 1.9rem; font-weight: 500">Select:</p>
-          <button class="btn-chosen">X</button>
-          <button class="btn-chosen">O</button>
+          <button class="btn btn-chosenx">X</button>
+          <button class="btn btn-choseno">O</button>
         </div>
 
         <form class="player1-name">
@@ -42,7 +42,7 @@
 
       <div class="player2">
         <h2>Player 2</h2>
-        <form>
+        <form class="player2-name">
           <input
             type="text"
             id="player2-name"
@@ -57,12 +57,16 @@
 
       </div>
 
-      <div class="game">
-        <button></button><button></button><button></button><button></button
-        ><button></button><button></button><button></button><button></button
-        ><button></button>
+      <div class="game-arena">
+        <h3 id="turn"></h3>
+        <div class="game">
+        <button class="box"></button><button class="box"></button><button class="box"></button><button class="box"></button><button class="box"></button><button class="box"></button><button class="box"></button><button class="box"></button><button class="box"></button>
+       </div>
+       <button id="reset-btn">Reset</button>
       </div>
+
     </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
