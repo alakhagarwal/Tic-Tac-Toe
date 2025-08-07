@@ -17,6 +17,7 @@ main {
 
 .container {
   max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -32,6 +33,7 @@ header {
   font-size: 1.2rem;
   border: 1px solid #ccc;
   max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -73,6 +75,7 @@ form button {
   margin-top: 20px;
   border: 1px solid #ccc;
   max-width: 500px;
+  width: 100%;
   display: none;
   flex-direction: column;
   gap: 15px;
@@ -133,12 +136,13 @@ form button {
   margin-top: 20px;
   border: 1px solid #ccc;
   max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
   justify-content: center;
   align-items: center;
-  padding: 40px 80px;
+  padding: 40px 20px; /* Reduce padding for mobile */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   background-color: white;
@@ -148,6 +152,8 @@ form button {
 .game {
   height: 400px;
   width: 400px;
+  max-height: 90vh;
+  max-width: 90vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -215,4 +221,82 @@ form button:hover, #reset-btn:hover {
   text-align: center;
 }
 
+#reset-btn {
+  margin: 0 auto;
+  padding: 10px 25px;
+}
 
+
+@media screen and (max-width: 768px) {
+
+  main {
+    gap :10px;
+  }
+
+  #turn {
+    font-size: 1.2rem;
+  }
+
+  .game {
+    max-height: 350px;
+    max-width: 350px;
+
+  }
+
+  .welcome, .player1, .player2 {
+    padding: 30px 20px;
+    max-width: 400px;
+  }
+
+    .welcome h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome p {
+    font-size: 1.5rem;
+  }
+
+  .player1 h2, .player2 h2 {
+    font-size: 2.2rem;
+  }
+
+  .game-arena h3 {
+    font-size: 2rem;
+  }
+
+    main {
+    margin-top: -15px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+    header {
+    font-size: 1.3rem;
+  }
+
+  main {
+    gap: 15px;
+  }
+
+  .welcome, .player1, .player2 {
+    padding: 25px 15px;
+    max-width: 320px;
+  }
+
+    .welcome h1 {
+    font-size: 2rem;
+  }
+
+  .welcome p {
+    font-size: 1.2rem;
+  }
+
+  .player1 h2, .player2 h2 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    margin-top: -25px;
+  }
+}
